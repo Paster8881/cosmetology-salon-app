@@ -3,27 +3,27 @@ import Link from "next/link";
 export default function Home() {
   return (
     <>
-      <header className="bg-white rounded-t-3xl border-b border-neutral-200">
-        <div className="mx-auto flex max-w-sm items-center justify-between px-4 py-4">
-            <div className="flex flex-col items-start leading-none text-sm font-semibold italic text-neutral-900">
-              <span>Beauty</span>
-              <span>Salon</span>
-            </div>
+    <main>
+       {/* Hero */}
+      <section className="bg-neutral-50 py-20 min-h-[90vh] flex items-center">
+       <div className="mx-auto max-w-6xl px-6" > 
       
-
-          <div className="flex items-center gap-4">
-          
-            <button
-              type="button"
-              aria-label="Open menu"
-              className="text-3xl leading-none text-neutral-900"
-            >
-              ☰
-            </button>
+            <h1 className="text-4xl sm:text-5xl font-semibold leading-tight">
+              Beauty
+              <br/>
+              Begins with Care
+              <br/>
+              and Attention
+              </h1>
+  
+          <div className="mt-8">
+            <button className="rounded-full bg-neutral-900 px-6 py-3 text-sm font-medium text-white transition hover:bg-neutral-800" >Book now</button>
           </div>
-        </div>
-      </header>
-      {/* Hero */}
+       </div>
+
+      </section>
+    </main>
+      
       
     </>
   )
