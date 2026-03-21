@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Contact from "../components/Contact";
 import Hero from "../components/Hero";
 import Services from "../components/Services";
 
@@ -8,6 +8,7 @@ export default function Home() {
     <main>
       <Hero></Hero>
       <Services></Services>
+      <Contact></Contact>
     </main>
       
       
