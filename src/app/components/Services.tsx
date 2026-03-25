@@ -21,7 +21,7 @@ export default function Services(){
               alt="Cosmetology service"
               width={600}
               height={420}
-              className="w-full h-[260px] object-cover"
+              className="w-full h-65 object-cover"
             />
 
             <h3 className="mt-3 text-2xl font-cormorant">
@@ -39,7 +39,7 @@ export default function Services(){
               alt="Facial treatment"
               width={600}
               height={420}
-              className="w-full h-[260px] object-cover"
+              className="w-full h-65 object-cover"
             />
 
             <h3 className="mt-3 text-2xl font-cormorant">
@@ -58,7 +58,7 @@ export default function Services(){
               alt="Facial treatment"
               width={600}
               height={420}
-              className="w-full h-[260px] object-cover"
+              className="w-full h-65 object-cover"
             />
 
             <h3 className="mt-3 text-2xl font-cormorant">

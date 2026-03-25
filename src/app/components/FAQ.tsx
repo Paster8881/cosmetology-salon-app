@@ -4,7 +4,6 @@ export default function FAQ() {
   return (
     <>
       <section className="bg-primary py-12">
-        <div>
         <div className="mx-auto max-w-4xl px-4">
           {/* Picture */}
           <div className="w-full overflow-hidden rounded-xl">
@@ -13,7 +12,7 @@ export default function FAQ() {
               alt="Cosmetology service"
               width={600}
               height={400}
-              className="w-full h-[360px] object-cover"
+              className="w-full h-90 object-cover"
             />
           </div>
         </div>
@@ -110,10 +109,7 @@ export default function FAQ() {
           </button>
         </div>
 
-        </div>
-
-        
-        </div>
+        </div>   
       </section>
     </>
   );
