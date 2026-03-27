@@ -1,8 +1,14 @@
 import type { Metadata } from "next";
 import Header from "./components/Header";
+import {Cormorant} from 'next/font/google'
 
 import "./globals.css";
 
+const cormorant = Cormorant({ 
+  subsets: ['latin'],
+  variable: '--font-cormorant',
+  weight: ['300', '400', '500', '600', '700']
+})
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -15,7 +21,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={cormorant.variable}>
       <body className="antialiased">
         <Header></Header>
         {children}
