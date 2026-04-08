@@ -4,12 +4,14 @@ import Services from "../components/Services";
 import Brand from "../components/Brand";
 import FAQ from "../components/FAQ";
 import Footer from "../components/Fotter";
+import Info from "../components/Info";
 
 export default function Home() {
   return (
     <>
     <main>
       <Hero></Hero>
+      <Info></Info>
       <Services></Services>
       <Contact></Contact>
       <Brand></Brand>

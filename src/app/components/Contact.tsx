@@ -20,8 +20,9 @@ export default function Contact() {
           {/* Viber */}
           <a href="#" className="flex flex-col items-center gap-2 group">
             <div className="w-14 h-14 flex items-center justify-center rounded-full border border-[#D6BFB8] text-[#A88989] transition-colors duration-300 group-hover:bg-[#A88989] group-hover:text-white group-hover:shadow-md">
-              <Phone size={22}
-                strokeWidth={1.5}
+              <Phone 
+              size={22}
+              strokeWidth={1.5}
               />
             </div>
             <span className="text-sm text-neutral-500 transition-colors duration-300 group-hover:text-[#A88989]">Viber</span>
