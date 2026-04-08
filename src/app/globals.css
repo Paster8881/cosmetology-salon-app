@@ -5,14 +5,14 @@
   --foreground: #171717;
 }
 
-@theme inline {
+@theme  {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 
   --font-cormorant: var(--font-cormorant);
-  --font-family-cormorant: var(--font-cormorant), serif;
+  --font-sans: var(--font-inter);
 
   --color-primary: #F6EBE7;
   --color-secondary: #FFF9F9;
@@ -29,5 +29,9 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), sans-serif;
+  h1, h2, h3 
+  {
+  font-family: var(--font-cormorant), serif;
+}
 }
