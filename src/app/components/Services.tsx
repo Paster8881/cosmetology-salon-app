@@ -61,6 +61,7 @@ export default function Services() {
                       <h3 className="mt-4 text-3xl font-cormorant px-4">
                         {service.title}
                       </h3>
+
                       <p className="mt-2  text-sm text-neutral-600 leading-relaxed px-4 font-sans">
                         {service.description}
                       </p>

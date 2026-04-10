@@ -44,7 +44,6 @@ export default function Info() {
                       <Icon
                         className="w-5 h-5 text-neutral-700"
                         strokeWidth={1.25}
-                        
                       />
                     </div>
 
