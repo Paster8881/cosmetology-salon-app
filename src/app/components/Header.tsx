@@ -40,7 +40,7 @@ export default function Header() {
 
 // sroll to top
   function srollToTop(){
-    window.scrollTo({ top: 30, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
   return (
@@ -51,16 +51,16 @@ export default function Header() {
           : "bg-transparent"
           }`}
       >
-        <div className="mx-auto flex max-w-6xl items-center justify-between">
+        <div className="mx-auto flex max-w-6xl items-center justify-between  md:px-1">
           <div className=" font-cormorant leading-none text-[#3E2A1F]">
             <button onClick={srollToTop}>
-              <h1 className="text-[#3E2A1F] text-xl font-medium tracking-wide">Beauty
+              <h1 className="text-[#3E2A1F] text-xl font-medium tracking-wide md:text-3xl">Beauty
                 Salon</h1>
             </button>
           </div>
 
           <button onClick={toggleMenu}>
-            <Menu size={22} strokeWidth={1.5} />
+            <Menu strokeWidth={1.5} className="w-5 h-5 md:w-8 md:h-8"/>
           </button>
 
 

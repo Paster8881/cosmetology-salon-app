@@ -22,14 +22,14 @@ export default function Hero() {
       </svg>
 
       {/* Content */}
-      <div className="relative z-10 max-w-md px-6 py-24 md:px-16">
+      <div className="relative z-10 max-w-md px-6 py-24 md:max-w-2lg md:px-14 ">
 
         <span className="mb-6 flex items-center gap-3 text-[10px] tracking-[0.3em] uppercase text-[#B8966A] font-medium
-          before:block before:w-8 before:h-px before:bg-[#B8966A]">
+          before:block before:w-8 before:h-px before:bg-[#B8966A] md:text-xl ">
           Expert Skincare in Key West
         </span>
 
-        <h1 className="mb-5  leading-[0.95] text-5xl md:text-6xl lg:text-8xl">
+        <h1 className="mb-5  leading-[0.95] text-5xl md:text-7xl lg:text-8xl">
           Beauty,<br />
           Crafted<br />
           with{" "}
@@ -42,13 +42,13 @@ export default function Hero() {
 
         <div className="flex items-center gap-6 flex-wrap">
           <button className="bg-[#3D2B1F] text-[#FAF8F5] px-8 py-4 text-[11px]
-             uppercase font-normal transition hover:bg-[#B8966A] tracking-widest">
+             uppercase font-normal transition hover:bg-[#B8966A] tracking-widest md:px-26 md:text-2xl">
             Book
           </button>
           <button className="flex items-center gap-2 text-[11px] tracking-[0.15em]
-            uppercase text-[#7A6356] font-light hover:text-[#3D2B1F] transition group bg-transparent border-none">
+            uppercase text-[#7A6356] font-light hover:text-[#3D2B1F] transition group bg-transparent border-none md:text-2xl ">
             Our Services
-            <span className="block w-6 h-px bg-current transition-all group-hover:w-9" />
+            <span className="block w-6 h-px bg-current transition-all group-hover:w-9 md:w-20"/>
           </button>
         </div>
       </div>

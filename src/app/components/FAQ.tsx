@@ -4,7 +4,7 @@ import { Plus, X } from "lucide-react";
 import { useState } from "react";
 type Item = {
   title: string,
-  answer:string
+  answer: string
 }
 
 export default function FAQ() {
@@ -25,6 +25,14 @@ export default function FAQ() {
     },
     {
       title: "Question 4",
+      answer: "Texts are any communication forms designed Texts are any communication forms designed Texts are any communication forms designed"
+    }, 
+    {
+      title: "Question 5",
+      answer: "Texts are any communication forms designed Texts are any communication forms designed Texts are any communication forms designed"
+    }, 
+    {
+      title: "Question 6",
       answer: "Texts are any communication forms designed Texts are any communication forms designed Texts are any communication forms designed"
     },
   ]
