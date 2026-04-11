@@ -1,4 +1,5 @@
 import { LucideIcon, MessageSquareMore, Gift, BrushCleaning } from "lucide-react"
+import Container from "./ui/Container"
 type InfoDatas = {
   icon: LucideIcon;
   title: string;
@@ -31,8 +32,8 @@ export default function Info() {
   return (
     <>
       <section className="bg-primary py-16">
-        <div className="mx-auto max-w-4xl px-4 flex flex-col items-start md:px-8">
-          <ul className="flex flex-col gap-8 list-none">
+        <Container>
+          <ul className="flex flex-col gap-8 list-none md:grid md:grid-cols-2 md:gap-16">
             {infoDatas.map((infodata, index) => {
               const Icon = infodata.icon;
 
@@ -40,7 +41,7 @@ export default function Info() {
                 <li key={index}>
                   <div className="flex items-start gap-4">
 
-                    <div className="p-3 bg-secondary rounded-xl shadow-sm">
+                    <div className="p-4 bg-secondary rounded-xl shadow-lg">
                       <Icon
                         className="w-5 h-5 text-neutral-700"
                         strokeWidth={1.25}
@@ -48,11 +49,11 @@ export default function Info() {
                     </div>
 
                     <div className="max-w-md">
-                      <div className="font-cormorant text-xl text-neutral-950 ">
+                      <div className="font-cormorant text-xl text-neutral-950 md:text-2xl mb-2 font-medium leading-6 ">
                         {infodata.title}
                       </div>
 
-                      <div className="font-sans text-sm text-neutral-600 leading-7">
+                      <div className="font-sans text-sm text-neutral-500 leading-7 md:text-base font-normal">
                         {infodata.describe}
                       </div>
                     </div>
@@ -62,7 +63,7 @@ export default function Info() {
               );
             })}
           </ul>
-        </div>
+        </Container>
       </section>
     </>
   )
