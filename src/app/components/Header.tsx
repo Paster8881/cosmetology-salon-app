@@ -51,7 +51,7 @@ export default function Header() {
           : "bg-transparent"
           }`}
       >
-        <div className="mx-auto flex max-w-6xl items-center justify-between  md:px-1">
+        <div className="mx-auto flex max-w-6xl items-center justify-between  md:px-3">
           <div className=" font-cormorant leading-none text-[#3E2A1F]">
             <button onClick={srollToTop}>
               <h1 className="text-[#3E2A1F] text-xl font-medium tracking-wide md:text-3xl">Beauty

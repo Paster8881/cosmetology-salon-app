@@ -31,7 +31,7 @@ export default function Info() {
   return (
     <>
       <section className="bg-primary py-16">
-        <div className="mx-auto max-w-4xl px-4 flex flex-col items-start">
+        <div className="mx-auto max-w-4xl px-4 flex flex-col items-start md:px-8">
           <ul className="flex flex-col gap-8 list-none">
             {infoDatas.map((infodata, index) => {
               const Icon = infodata.icon;
