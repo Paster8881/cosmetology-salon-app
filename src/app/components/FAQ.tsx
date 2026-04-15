@@ -1,5 +1,6 @@
 'use client'
 import Image from "next/image";
+import Container from "./ui/Container";
 import { Plus, X } from "lucide-react";
 import { useState } from "react";
 type Item = {
@@ -26,11 +27,11 @@ export default function FAQ() {
     {
       title: "Question 4",
       answer: "Texts are any communication forms designed Texts are any communication forms designed Texts are any communication forms designed"
-    }, 
+    },
     {
       title: "Question 5",
       answer: "Texts are any communication forms designed Texts are any communication forms designed Texts are any communication forms designed"
-    }, 
+    },
     {
       title: "Question 6",
       answer: "Texts are any communication forms designed Texts are any communication forms designed Texts are any communication forms designed"
@@ -48,7 +49,7 @@ export default function FAQ() {
   return (
     <>
       <section className="bg-primary py-12">
-        <div className="mx-auto max-w-4xl px-4">
+        <Container>
           {/* Picture */}
           <div className="w-full overflow-hidden rounded-xl">
             <Image
@@ -59,38 +60,43 @@ export default function FAQ() {
               className="w-full h-90 object-cover"
             />
           </div>
-        </div>
-        <div className="mx-auto max-w-4xl px-4 py-12 ">
-          <h2 className="text-start text-2xl  uppercase tracking-widest font-cormorant font-medium">Mosk asked question</h2>
-        </div>
 
-        {/* ALl Question */}
-        <div className="mx-auto max-w-4xl px-4 ">
+          <div className="mx-auto max-w-4xl px-4 py-16">
+            <h2 className="text-start text-2xl  uppercase tracking-widest font-cormorant  font-medium md:text-3xl">Frequently Asked Questions</h2>
+          </div>
 
-          {questions.map((question, index) => (
-            <div className="border-b border-gray-300 " key={index}>
+          {/* ALl Question */}
+          <div className="mx-auto max-w-4xl px-4 pt-2">
 
-              <button className="w-full flex justify-between items-center py-4 text-left" onClick={() => openMenu(index)} >
-                <span>
-                  {question.title}
-                </span>
-                {activeIndex === index
-                  ? <X>
-                    size={20}
-                  </X>
-                  : <Plus>
-                    size={20}
-                  </Plus>}
-              </button>
-              {activeIndex === index && (
-                <div className="pb-6 leading-7 mt-2 max-w-md">
-                  <p className="">{question.answer}</p>
-                </div>
-              )}
-            </div>
-          ))}
+            {questions.map((question, index) => (
+              <div className={`border-b border-gray-300 ${index === 0
+                ? "border-t"
+                : ""
+                }`}
+                key={index}>
+                <button className="w-full flex justify-between items-center py-5 text-left" onClick={() => openMenu(index)} >
+                  <span className="md:text-xl">
+                    {question.title}
+                  </span>
+                  {activeIndex === index
+                    ? <X>
+                      size={20}
+                    </X>
+                    : <Plus>
+                      size={20}
+                    </Plus>}
+                </button>
+                {activeIndex === index && (
+                  <div className="pb-6 leading-7 mt-2 max-w-md">
+                    <p className="">{question.answer}</p>
+                  </div>
+                )}
+              </div>
+            ))}
 
-        </div>
+          </div>
+        </Container>
+
 
 
       </section>
