@@ -53,15 +53,14 @@ export default function Footer() {
                 </div>
                 <h6 className="font-semibold uppercase tracking-widest text-gray-700 md:text-lg">{icon.title}</h6>
                 <div className="flex flex-col items-center gap-1 mt-1">
-                  {icon.descriptions.map((desciption , index) => (
+                  {icon.descriptions.map((desciption, index) => (
                     <div key={index}>
-                    <p className="tracking-widest text-base ">
-                    <a className="ml-1.5" href="./">
-                      {desciption}
-                    </a>
-                  </p>
-  
-                  </div>
+                      <p className="tracking-widest text-base ">
+                        <a className="ml-1.5" href="./">
+                          {desciption}
+                        </a>
+                      </p>
+                    </div>
                   ))}
                 </div>
               </div>
