@@ -46,12 +46,12 @@ export default function Services() {
   ]
   return (
     <>
-      <section className="bg-secondary py-16">
+      <section className="bg-secondary py-16 lg:py-30">
         <Container>
           <div className="text-center mb-16">
             <a
               href="/services"
-              className="inline-block font-cormorant leading-tight text-sm uppercase tracking-[0.2em] border-b border-gray-300 md:text-xl"
+              className="inline-block font-cormorant leading-tight text-sm uppercase tracking-[0.2em] border-b border-gray-300 md:text-xl lg:text-2xl"
             >
               View All Services
             </a>
@@ -59,22 +59,24 @@ export default function Services() {
 
           {/* 
         Photo */}
-          <ul className="list-none">
+        
+          <ul className="list-none ">
             <Swiper
               slidesPerView={1.15}
               spaceBetween={20}
               resistance={true}
-              
               resistanceRatio={0.9}
               grabCursor={true}
               breakpoints={{
                 768: {
                   slidesPerView: "auto",
+                }, 1024: {
+                  slidesPerView: 4.15, 
                 },
               }}
             >
               {services.map((service, index) => (
-                <SwiperSlide key={index} className="max-w-[320px]">
+                <SwiperSlide key={index} className="h-full">
                   <li>
                     <a href={service.href} className="group block bg-primary shadow-[0_6px_20px_rgba(0,0,0,0.05)] ">
                       <Image
@@ -85,11 +87,11 @@ export default function Services() {
                         className="w-full aspect-3/4 object-cover  transition duration-300 group-hover:brightness-110"
                       />
 
-                      <h3 className="mt-4 text-3xl font-cormorant px-4">
+                      <h3 className="mt-3 text-3xl font-cormorant px-3 lg:text-4xl">
                         {service.title}
                       </h3>
 
-                      <p className="mt-2  text-sm text-neutral-600 leading-relaxed px-4 font-sans">
+                      <p className="mt-2  text-sm text-neutral-600 leading-relaxed px-4 font-sans ">
                         {service.description}
                       </p>
                     </a>
