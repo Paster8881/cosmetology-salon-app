@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
 import Header from "./components/Header";
-import {Cormorant,Inter} from 'next/font/google'
+import {Cormorant,Inter, Geist } from 'next/font/google'
 
 import "./globals.css";
+import { cn } from "@/src/app/lib/utils";
+
+const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
 const cormorant = Cormorant({ 
   subsets: ['latin'],
@@ -24,7 +27,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${cormorant.variable} ${inter.variable}` }>
+    <html lang="en" className={cn(cormorant.variable, inter.variable, "font-sans", geist.variable)}>
       <body className="antialiased">
         <Header></Header>
         {children}

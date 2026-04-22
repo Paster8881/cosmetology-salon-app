@@ -1,7 +1,10 @@
+"use client"
 import Container from "./ui/Container";
+import { useState } from "react";
+import DrawerRight from "./ui/drawer/DrawerRight";
 export default function Hero() {
+  const [open , setOpen] = useState(false);
   return (
-
     <section className="relative min-h-screen overflow-hidden bg-[#FAF8F5] flex items-center">
       <Container>
         <svg
@@ -43,7 +46,7 @@ export default function Hero() {
 
           <div className="flex items-center gap-6 flex-wrap">
             <button className="bg-[#3D2B1F] text-[#FAF8F5] px-8 py-4 text-[11px]
-             uppercase font-normal transition hover:bg-[#B8966A] tracking-widest md:px-26 md:text-2xl">
+             uppercase font-normal transition hover:bg-[#B8966A] tracking-widest md:px-26 md:text-2xl" onClick={() => setOpen(true)}>
               Book
             </button>
             <button className="flex items-center gap-2 text-[11px] tracking-[0.15em]
@@ -51,6 +54,7 @@ export default function Hero() {
               Our Services
               <span className="block w-6 h-px bg-current transition-all group-hover:w-9 md:w-20" />
             </button>
+            <DrawerRight open = {open} setOpen = {setOpen}></DrawerRight>
           </div>
         </div>
       </Container>

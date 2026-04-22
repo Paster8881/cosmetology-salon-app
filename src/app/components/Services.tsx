@@ -69,7 +69,7 @@ export default function Services() {
               grabCursor={true}
               breakpoints={{
                 768: {
-                  slidesPerView: "auto",
+                  slidesPerView: 2.15,
                 }, 1024: {
                   slidesPerView: 4.15, 
                 },
