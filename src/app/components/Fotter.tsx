@@ -36,7 +36,7 @@ export default function Footer() {
   return (
     <section className="bg-secondary py-12 md:py-30">
       <Container>
-        <div className="px-4 flex flex-col items-center gap-15 md:flex md:flex-row md:items-start md:gap-18">
+        <div className=" max-w-260 mx-auto px-4 flex flex-col items-center gap-15 md:flex md:flex-row md:items-start md:gap-18 lg:gap-60">
 
           {iconsData.map((icon, index) => {
             const Icon = icon.icon;
