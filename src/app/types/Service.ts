@@ -4,4 +4,5 @@ export type Service = {
   price: number
   category: string
   description?: string
+  
 }

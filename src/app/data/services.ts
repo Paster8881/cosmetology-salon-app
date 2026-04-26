@@ -1,23 +1,23 @@
-import { Service } from "../types/service";
+import { Service } from "../types/Service";
 
 export const services: Service[] = [
    {
     id: 1,
-    title: "Acne treatment",
+    title: "Piercing for man",
     price: 120 ,
     category: "piercing",
   },
   {
     id: 2,
-    title: "Acne treatment",
+    title: "Piercing for wooman",
     price: 160 ,
-    category: "piercing",
+    category: "acne",
   },
   {
     id: 3,
-    title: "Acne treatment",
+    title: "Vijii",
     price: 180 ,
-    category: "piercing",
+    category: "viji",
   },
   {
     id: 4,

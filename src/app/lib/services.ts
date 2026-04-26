@@ -1,4 +1,4 @@
-import { Service } from "../types/service";
+import { Service } from "../types/Service";
 import { services } from "../data/services";
 
 export const getServices = async (): Promise<Service[]> => {
