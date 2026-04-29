@@ -7,8 +7,8 @@ type ServiceCardProps = {
 export default function ServiceCard({ title, price, selected }: ServiceCardProps){
   return(
     <>
-    <h2 className="lg:text-xl mt-4">{title}</h2>
-   <div className="flex items-center justify-between bg-[#F6EBE7] rounded-xl p-4">
+    
+   <div className="flex items-center justify-between bg-[#F6EBE7] rounded-xl p-4 mt-2">
       
       {/* Left side */}
       
@@ -16,7 +16,7 @@ export default function ServiceCard({ title, price, selected }: ServiceCardProps
         <p className="text-sm text-gray-700">{title}</p>
         <p className="text-base font-semibold text-black mt-1">{price}</p>
       </div>
-
+    
       {/* Checkbox */}
       <div
         className={`w-5 h-5 rounded-md flex items-center justify-center 
