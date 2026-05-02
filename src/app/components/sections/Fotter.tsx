@@ -1,5 +1,5 @@
 import { Clock6, Smartphone, MapPin, LucideIcon } from "lucide-react"
-import Container from "./ui/Container"
+import Container from "../ui/Container"
 type IconData = {
   icon: LucideIcon,
   title: string,

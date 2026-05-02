@@ -1,11 +1,11 @@
 // import Contact from "../components/Contact";
-import Hero from "../components/Hero";
-import Services from "../components/Services";
-import Brand from "../components/Brand";
-import FAQ from "../components/FAQ";
-import Footer from "../components/Fotter";
-import Info from "../components/Info";
-import GiftCards from "../components/GiftCards";
+import Hero from "../components/sections/Hero";
+import Services from "../components/sections/Services";
+import Brand from "../components/sections/Brand";
+import FAQ from "../components/sections/FAQ";
+import Footer from "../components/sections/Fotter";
+import Info from "../components/sections/Info";
+import GiftCards from "../components/sections/GiftCards";
 
 export default function Home() {
   return (

@@ -1,5 +1,5 @@
 import { Phone, Send, MessageCircle, LucideIcon } from "lucide-react";
-import Container from "./ui/Container";
+import Container from "../ui/Container";
 type IconsData = {
   title: string,
   icon: LucideIcon

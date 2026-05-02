@@ -1,6 +1,6 @@
 'use client'
 import Image from "next/image";
-import Container from "./ui/Container";
+import Container from "../ui/Container";
 import { Plus, X } from "lucide-react";
 import { useState } from "react";
 type Item = {

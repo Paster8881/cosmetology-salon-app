@@ -1,4 +1,4 @@
-import { Category } from "../types/Category";
+import { Category } from "../../types/сategory";
 
 export const categories:Category[] = [
   { id: "women_manicure", categoryTitle: "Жіночий манікюр" },

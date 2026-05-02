@@ -1,7 +1,7 @@
 "use client";
 import { Menu } from "lucide-react";
 import MenuOverlay from "./MenuOverlay";
-import Navbar from "./ui/Navbar";
+import Navbar from "../ui/Navbar";
 import { useEffect, useState } from "react";
 
 

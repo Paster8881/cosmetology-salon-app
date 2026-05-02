@@ -1,5 +1,5 @@
 import { LucideIcon, MessageSquareMore, Gift, BrushCleaning, Award  } from "lucide-react"
-import Container from "./ui/Container"
+import Container from "../ui/Container"
 type InfoDatas = {
   icon: LucideIcon;
   title: string;

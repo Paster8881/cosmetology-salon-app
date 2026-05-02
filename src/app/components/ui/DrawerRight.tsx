@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button"
-import ServiceList from "./ServiceList"
+import ServiceList from "../services/ServiceList"
 
 import {
   Drawer,

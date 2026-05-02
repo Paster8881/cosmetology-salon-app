@@ -1,7 +1,7 @@
 "use client"
-import Container from "./ui/Container";
+import Container from "../ui/Container";
 import { useState } from "react";
-import DrawerRight from "./ui/drawer/DrawerRight";
+import DrawerRight from "../ui//DrawerRight";
 export default function Hero() {
   const [open , setOpen] = useState(false);
   return (

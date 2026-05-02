@@ -1,8 +1,8 @@
 "use client"
 import { getServices } from "@/src/app/lib/services"
 import { getCategories } from "@/src/app/lib/categories";
-import { Category } from "@/src/app/types/Category";
-import { Service } from "@/src/app/types/Service";
+import { Category } from "@/src/app/types/сategory";
+import { Service } from "@/src/app/types/service";
 import { useEffect, useMemo, useState } from "react";
 import ServiceCard from "./ServiceCard"
 
