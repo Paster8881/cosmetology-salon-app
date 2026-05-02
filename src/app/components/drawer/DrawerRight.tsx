@@ -1,5 +1,5 @@
-import { Button } from "@/components/ui/button"
-import ServiceList from "../services/ServiceList"
+import { Button } from "@/src/app/components/ui/button"
+import ServiceList from "./ServiceList"
 
 import {
   Drawer,
@@ -9,7 +9,7 @@ import {
   DrawerFooter,
   DrawerHeader,
   DrawerTitle,
-} from "@/components/ui/drawer"
+} from "@/src/app/components/ui/drawer"
 
 type Props = {
   open: boolean,
