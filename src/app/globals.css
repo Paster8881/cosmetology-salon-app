@@ -137,11 +137,11 @@ body {
   --sidebar-ring: oklch(0.556 0 0);
 }
 .scroll-container::-webkit-scrollbar {
-  height: 0px;
+  height: 4px;
 }
 
 .scroll-container:hover::-webkit-scrollbar {
-  height: 4px;
+  height: 6px;
 }
 
 .scroll-container::-webkit-scrollbar-thumb {

@@ -10,6 +10,7 @@ import {
   DrawerHeader,
   DrawerTitle,
 } from "@/src/app/components/ui/drawer"
+import { useState } from "react"
 
 type Props = {
   open: boolean,
@@ -17,6 +18,11 @@ type Props = {
 }
 
 export default function DrawerRight({ open, setOpen }: Props) {
+  const [stepSubmit, setStepSubmit] = useState<'service' | 'calendar'>('service')
+
+  function hundleSubmit() {
+    setStepSubmit('calendar');
+  }
   function handleClose() {
     setOpen(false);
   }
@@ -28,22 +34,19 @@ export default function DrawerRight({ open, setOpen }: Props) {
             <DrawerTitle className="font-cormorant lg:text-2xl ">Beauty Salon</DrawerTitle>
             <DrawerDescription>adress exaple</DrawerDescription>
           </DrawerHeader>
-          <div className="no-scrollbar overflow-y-auto px-4">
-            <h3 className="lg:text-2xl">Chosee service</h3>
-            <div className="relative">
-              <input
-                type="text"
-                placeholder="Find Service"
-                className="w-full pl-10 pr-4 py-2 rounded-xl border bg-gray-50 outline-none"
-              />
+
+          {stepSubmit === 'service'
+            ?
+            <div className="no-scrollbar overflow-y-auto px-4">
+
+              <h3 className="lg:text-2xl">Chosee service</h3>
+              <ServiceList></ServiceList>
             </div>
-            <ServiceList></ServiceList>
-            
-           
-            
-          </div>
+            :
+            ""}
+
           <DrawerFooter>
-            <Button>Submit</Button>
+            <Button onClick={hundleSubmit}>Submit</Button>
             <DrawerClose asChild>
               <Button variant="outline" onClick={handleClose}>Cancel</Button>
             </DrawerClose>

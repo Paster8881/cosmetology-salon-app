@@ -2,13 +2,14 @@ type ServiceCardProps = {
   title: string
   price: number
   selected?: boolean
+  onClick: () => void;
 }
 
-export default function ServiceCard({ title, price, selected }: ServiceCardProps){
+export default function ServiceCard({ title, price, selected , onClick }: ServiceCardProps){
   return(
     <>
     
-   <div className="flex items-center justify-between bg-[#F6EBE7] rounded-xl p-4 mt-2">
+   <div className="flex items-center justify-between bg-[#F6EBE7] rounded-xl p-4 mt-2" onClick={onClick}>
       
       {/* Left side */}
       
@@ -19,8 +20,10 @@ export default function ServiceCard({ title, price, selected }: ServiceCardProps
     
       {/* Checkbox */}
       <div
+        
         className={`w-5 h-5 rounded-md flex items-center justify-center 
         ${selected ? "bg-[#E5CFC7]" : "bg-[#EADCD7]"}`}
+        
       >
         {selected && (
           <svg
@@ -31,6 +34,7 @@ export default function ServiceCard({ title, price, selected }: ServiceCardProps
             viewBox="0 0 24 24"
           >
             <path d="M5 13l4 4L19 7" />
+            
           </svg>
         )}
       </div>

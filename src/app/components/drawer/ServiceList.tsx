@@ -10,6 +10,7 @@ export default function ServiceList() {
   const [services, setServices] = useState<Service[]>([]);
   const [categories, setCategories] = useState<Category[]>([]);
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  const [selectedServiceId, setSelectedServiceId] = useState<number[]>([]);
 
 
   const groupServices = useMemo(() => {
@@ -30,6 +31,14 @@ export default function ServiceList() {
   function handleCategories(clickedCategories: string | null) {
     setSelectedCategory(clickedCategories);
   }
+  function setSelectedServices(clickedServiceId: number) {
+    setSelectedServiceId(prev => {
+      if (prev.includes(clickedServiceId)) {
+        return prev.filter(id => id !== clickedServiceId)
+      }
+      return [...prev, clickedServiceId]
+    })
+  }
   ///render all
 
   ///render choose categori
@@ -47,18 +56,19 @@ export default function ServiceList() {
 
   return (
     <>
-
-      <div className="scroll-container flex gap-2 overflow-x-auto cursor-pointer mt-6">
-        <button className="px-4 py-2 bg-gray-400 rounded-full whitespace-nowrap cursor-pointer" onClick={() => handleCategories(null)}>All</button>
-        {categories.map((categori, index) => (
-          <button
-            key={index}
-            className={selectedCategory === categori.id ? "px-4 py-2 bg-gray-200 rounded-full whitespace-nowrap cursor-pointer" : "px-4 py-2 bg-gray-400 rounded-full whitespace-nowrap cursor-pointer"}
-            onClick={() => handleCategories(categori.id)}
-          >
-            {categori.id}
-          </button>
-        ))}
+      <div className="sticky top-0 z-10 bg-white my-4">
+        <div className="scroll-container flex gap-3 overflow-x-auto mt-2">
+          <button className="px-4 py-2 bg-gray-400 rounded-full whitespace-nowrap cursor-pointer" onClick={() => handleCategories(null)}>All</button>
+          {categories.map((categori, index) => (
+            <button
+              key={index}
+              className={selectedCategory === categori.id ? "px-4 py-2 bg-gray-200 rounded-full whitespace-nowrap cursor-pointer" : "px-4 py-2 bg-gray-400 rounded-full whitespace-nowrap cursor-pointer"}
+              onClick={() => handleCategories(categori.id)}
+            >
+              {categori.id}
+            </button>
+          ))}
+        </div>
       </div>
 
 
@@ -73,7 +83,8 @@ export default function ServiceList() {
                 <ServiceCard key={service.id}
                   title={service.title}
                   price={service.price}
-                  selected={false}
+                  selected={selectedServiceId.includes(service.id)}
+                  onClick={() => setSelectedServices(service.id)}
                 ></ServiceCard>
               ))}
             </div>
@@ -86,7 +97,8 @@ export default function ServiceList() {
             <ServiceCard key={filteredService.id}
               title={filteredService.title}
               price={filteredService.price}
-              selected={false}
+              selected={selectedServiceId.includes(filteredService.id)}
+              onClick={() => setSelectedServices(filteredService.id)}
             ></ServiceCard>
           </>
         ))
