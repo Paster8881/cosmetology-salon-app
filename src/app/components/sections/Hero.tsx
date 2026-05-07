@@ -2,7 +2,12 @@
 import Container from "../ui/Container";
 import { useState } from "react";
 import DrawerRight from "../drawer/DrawerRight";
-export default function Hero() {
+import { Category } from "../../types/сategory";
+
+type HeroProps = {
+  categories: Category[]
+};
+export default function Hero({categories}:HeroProps) {
   const [open , setOpen] = useState(false);
   return (
     <section className="relative min-h-screen overflow-hidden bg-[#FAF8F5] flex items-center">
@@ -54,7 +59,7 @@ export default function Hero() {
               Our Services
               <span className="block w-6 h-px bg-current transition-all group-hover:w-9 md:w-20" />
             </button>
-            <DrawerRight open = {open} setOpen = {setOpen}></DrawerRight>
+            <DrawerRight open = {open} setOpen = {setOpen} categories = {categories}></DrawerRight>
           </div>
         </div>
       </Container>

@@ -1,14 +1,17 @@
 "use client"
-import { getServices } from "@/src/app/lib/services"
-import { getCategories } from "@/src/app/lib/categories";
+import { getServices } from "@/src/app/lib/actions/services"
 import { Category } from "@/src/app/types/сategory";
 import { Service } from "@/src/app/types/service";
 import { useEffect, useMemo, useState } from "react";
 import ServiceCard from "./ServiceCard"
 
-export default function ServiceList() {
+type ServiceListProps = {
+  categories: Category[]
+}
+
+export default function ServiceList({categories}:ServiceListProps) {
   const [services, setServices] = useState<Service[]>([]);
-  const [categories, setCategories] = useState<Category[]>([]);
+  // const [categories, setCategories] = useState<Category[]>([]);
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [selectedServiceId, setSelectedServiceId] = useState<number[]>([]);
 
@@ -24,9 +27,7 @@ export default function ServiceList() {
   }, [])
 
   ///get category
-  useEffect(() => {
-    getCategories().then(setCategories);
-  }, [])
+ 
 
   function handleCategories(clickedCategories: string | null) {
     setSelectedCategory(clickedCategories);
@@ -49,7 +50,7 @@ export default function ServiceList() {
   let grouptedServices: [string, Service[] | undefined][] = [];
   if (selectedCategory === null) {
     grouptedServices = groupServices;
-    console.log('groupservices', grouptedServices);
+    // console.log('groupservices', grouptedServices);
   } else {
     filteredServices = services.filter(service => service.categoryId === selectedCategory)
   }

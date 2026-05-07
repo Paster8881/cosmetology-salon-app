@@ -6,14 +6,15 @@ import FAQ from "../components/sections/FAQ";
 import Footer from "../components/sections/Fotter";
 import Info from "../components/sections/Info";
 import GiftCards from "../components/sections/GiftCards";
-
-export default function Home() {
+import { getCategories } from "../lib/actions/categories"
+export  default async function Home() {
+  const categories = await getCategories();
   return (
     <>
     <main>
-      <Hero></Hero>
+      <Hero categories={categories}></Hero>
       <Info></Info>
-      <Services></Services>
+      <Services ></Services>
       {/* <Contact></Contact> */}
       <GiftCards></GiftCards>
       <Brand></Brand>

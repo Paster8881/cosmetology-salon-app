@@ -3,7 +3,7 @@ import Header from "./components/sections/Header";
 import {Cormorant,Inter, Geist } from 'next/font/google'
 
 import "./globals.css";
-import { cn } from "@/src/app/lib/utils";
+import { cn } from "@/src/app/lib/utils/utils";
 
 const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 

@@ -11,13 +11,15 @@ import {
 } from "@/src/app/components/ui/drawer"
 import { useState } from "react"
 import CalendarDrawer from "./CalendarDrawer"
+import { Category } from "../../types/сategory"
 
 type Props = {
   open: boolean,
+  categories: Category[]
   setOpen: (value: boolean) => void
 }
 
-export default function DrawerRight({ open, setOpen }: Props) {
+export default function DrawerRight({ open, setOpen , categories }: Props) {
   const [stepSubmit, setStepSubmit] = useState<'service' | 'calendar'>('service')
 
   function hundleSubmit() {
@@ -43,7 +45,7 @@ export default function DrawerRight({ open, setOpen }: Props) {
             <div className="no-scrollbar overflow-y-auto px-4">
 
               <h3 className="lg:text-2xl">Chosee service</h3>
-              <ServiceList></ServiceList>
+              <ServiceList categories={categories}></ServiceList>
             </div>
             :
             <CalendarDrawer />}
